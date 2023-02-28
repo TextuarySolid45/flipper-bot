@@ -16,9 +16,11 @@ export const create = {
   })
 };
 
+const uuidRegex = "/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i";
+
 export const findOne = {
   params: Joi.object({
-    id: Joi.number().required()
+    id: Joi.string.regex(uuidRegex).require
   })
 };
 

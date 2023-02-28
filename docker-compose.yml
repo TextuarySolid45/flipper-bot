@@ -3,19 +3,18 @@ version: '3.8'
 services:
   postgres:
     image: 'postgres:alpine'
-    volumes:
-      - db-data:/var/lib/postgresql/data
+
     ports:
       - '5432:5432'
     environment:
-      - POSTGRES_DB=sneakerbot
-      - POSTGRES_USER=sneakerbot
-      - POSTGRES_PASSWORD=A6aqvt7>8E,bd@RH
+      - POSTGRES_DB=galopez
+      - POSTGRES_USER=galopez
+      - POSTGRES_PASSWORD=SaraRamos2020!
   server:
     build: ./
     image: samc621/sneakerbot
     ports:
-      - '8000:8000'
+      - '8080:8080'
       - '5900:5900'
     depends_on:
       - postgres

@@ -3,7 +3,7 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { Cluster } from 'puppeteer-cluster';
 import proxyChain from 'proxy-chain';
 import Ua from 'puppeteer-extra-plugin-anonymize-ua';
-import UserAgent from 'user-agents';
+import UsUserAgenterAgent from 'user-agents';
 
 import Task from '../api/Tasks/model.js';
 import Proxy from '../api/Proxies/model.js';
